@@ -1,0 +1,151 @@
+body {
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-image: url(./img/0.jpg);
+    background-position: 0 0;
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+#conbox {
+    width: 1000px;
+    height: 700px;
+    background: rgb(255, 255, 255, 0.7);
+    margin: 120px auto;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+#left-content {
+    width: 30%;
+    position: relative;
+}
+#right-content {
+    width: 60%;
+    position: relative;
+}
+
+#clock {
+    text-align: center;
+    font-size: 55px;
+}
+
+#login-form {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#login-form input:first-child {
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    
+}
+
+#login-form input:last-child {
+    width: 70px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: #000;
+    border-radius: 10px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+#weather {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+
+
+#weather span {
+    display: block;
+    text-align: center;
+}
+
+#weather span:first-child {
+    margin-bottom: 10px;
+}
+
+#greeting {
+    text-align: center;
+    font-size: 30px;
+}
+
+#todo {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 30px;
+    color: #5D9CCD;
+}
+
+#todo-form {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#todo-form input {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+}
+
+#todo-list {
+    list-style:none;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 100px;
+}
+
+#todo-list li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#todo-list li span {
+    display: block;
+    text-align: center;
+}
+
+#todo-list button {
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#quote {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+}
+
+#quote span {
+    display: block;
+    text-align: center;
+}
+
+#quote span:last-child {
+    margin-top: 10px;
+    color: #4F7BBB;
+}
