@@ -1,14 +1,16 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const logout = document.getElementById("logout");
+
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
-    // submit의 기본 동작이 새로고침이므로 새로고침 안 되게 막아준다 
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
+    logout.classList.remove(HIDDEN_CLASSNAME);
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
@@ -23,7 +25,15 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if (savedUsername === null){
     loginForm.classList.remove(HIDDEN_CLASSNAME);
+    logout.classList.add(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     paintGreetings(savedUsername)
 }
+
+logout.addEventListener("click", () => {
+    localStorage.removeItem(USERNAME_KEY);
+    localStorage.removeItem("todos");
+    logout.classList.add(HIDDEN_CLASSNAME);
+    location.reload();
+});

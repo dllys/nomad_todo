@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    position: relative;
 }
 #left-content {
     width: 30%;
@@ -78,6 +79,38 @@ body {
 
 #weather span:first-child {
     margin-bottom: 10px;
+}
+
+#logout {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+
+#logout .logout-el {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logout:hover i,
+#logout:hover button {
+    color: #5D9CCD;
+}
+
+#logout i {
+    font-size: 20px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+#logout button {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 #greeting {
